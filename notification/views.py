@@ -35,6 +35,7 @@ def notices(request):
             and to be displayed on the site.
     """
     notices = Notice.objects.notices_for(request.user, on_site=True)
+    print 'testing'
     
     return render_to_response("notification/notices.html", {
         "notices": notices,
